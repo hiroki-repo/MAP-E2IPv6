@@ -1132,7 +1132,7 @@ wpoke ipv6array,4,(((prm_0>>16)&0xFFFF)&0xFFFF)
 poke ipv6array,6,prm_1
 swbreak
 case ipv4tohex(133,200,0,0)
-lpoke ipv6array,0,0x847a0424|(((prm_0>>8)&1)<<24)
+lpoke ipv6array,0,0x807a0424|(((prm_0>>8)&1)<<24)
 wpoke ipv6array,4,(((prm_0>>16)&0xFFFF)&0xFFFF)
 poke ipv6array,6,prm_1
 swbreak
