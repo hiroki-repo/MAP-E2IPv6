@@ -1153,6 +1153,7 @@ ipv6cutxtmp2=ipv6zerocount(cnt)
 repeat 8:if ipv6zerocount(cnt)>ipv6cutxtmp & ipv6zerocount(cnt)>ipv6cutxtmp2{ipv6cutxtmp=ipv6zerocount(cnt):ipv6cutx=cnt}:loop
 loop
 ipv6str="":repeat 8:if ipv6zerocountxyz(ipv6cutx)<=cnt && cnt<(ipv6zerocountxyz(ipv6cutx)+ipv6zerocount(ipv6cutx)) && ipv6cutx!=8{if ipv6zerocountxyz(ipv6cutx)=cnt{ipv6str+=":"}}else{if peek(prm_0,0+(cnt*2))!=0{ipv6str+=strf("%x",peek(prm_0,0+(cnt*2)))}:if peek(prm_0,0+(cnt*2))=0{ipv6str+=strf("%x",peek(prm_0,1+(cnt*2)))}else{ipv6str+=strf("%02x",peek(prm_0,1+(cnt*2)))}:if cnt!=7{ipv6str+=":"}}:loop
+if strmid(ipv6str,0,1)=":" & ((peek(ipv6str,1)>='0' & peek(ipv6str,1)<='9')|(peek(ipv6str,1)>='a' & peek(ipv6str,1)<='f')|strlen(ipv6str)=1){ipv6str=":"+ipv6str}
 return ipv6str
 #global
 
