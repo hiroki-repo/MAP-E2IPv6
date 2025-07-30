@@ -619,7 +619,7 @@ lpoke ipv6array,0,0x827a0424
 wpoke ipv6array,4,0x00d8+(((prm_0>>16)&0xFFFF)&0xFF07)
 poke ipv6array,6,prm_1
 }
-if betole(prm_0)>=betole(ipv4tohex(122,135,64,0)) & betole(prm_0)<=betole(ipv4tohex(125,135,71,255)){
+if betole(prm_0)>=betole(ipv4tohex(122,135,64,0)) & betole(prm_0)<=betole(ipv4tohex(122,135,71,255)){
 lpoke ipv6array,0,0x827a0424
 wpoke ipv6array,4,0x00e0+(((prm_0>>16)&0xFFFF)&0xFF07)
 poke ipv6array,6,prm_1
